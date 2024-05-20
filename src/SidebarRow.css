@@ -1,0 +1,14 @@
+.sidebarRow {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    color: white;
+    cursor: pointer;
+}
+.sidebarRow > .MuiAvatar-root {
+    margin-right: 1em;
+}
+.sidebarRow > .MuiSvgIcon-root {
+    margin: .2em;
+    font-size: 1.5;
+}

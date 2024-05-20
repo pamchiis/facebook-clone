@@ -32,9 +32,10 @@
     border: solid white;
 }
 .header__input > input {
+    color: white;
     background-color:transparent;
+    outline: none;
     border: none;
-    outline-width: 0;
 }
 .header__middle {
     display: flex;
@@ -54,8 +55,18 @@
     padding: 1em 2em;
     cursor: pointer;
 }
+.header__option--active > .MuiSvgIcon-root {
+    color: #2e81f4;
+}
+.header__option--active {
+    border-bottom: .2em solid #2e81f4;
+}
 .header__option:hover {
-    background-color: rgb(0, 12, 19);
+    background-color: rgb(0, 34, 53);
+    border-bottom: none;
+    outline: none;
+    margin-bottom: .2em;
+    border-radius: .5em;
 }
 .header__info {
     display: flex;
