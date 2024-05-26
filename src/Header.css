@@ -53,19 +53,22 @@
     z-index: 100;
     align-items: center;
     padding: 1em 2em;
+    margin: 0 .5em;
     cursor: pointer;
 }
 .header__option--active > .MuiSvgIcon-root {
     color: #2e81f4;
 }
 .header__option--active {
-    border-bottom: .2em solid #2e81f4;
+    background-color: rgb(0, 34, 53);
+    border-bottom: none;
+    outline: none;
+    border-radius: .5em;
 }
 .header__option:hover {
     background-color: rgb(0, 34, 53);
     border-bottom: none;
     outline: none;
-    margin-bottom: .2em;
     border-radius: .5em;
 }
 .header__info {
