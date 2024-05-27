@@ -7,8 +7,11 @@
     padding: 1em;
     width: 40em;
 }
+.post > .post__top , .post > .post__body {
+    padding: .5em;
+}
 
-.post__header {
+.post__top {
     display: flex;
     gap: 1em;
     align-items: center;
@@ -22,4 +25,41 @@
 
 .header__timeblock > h5 {
     font-weight: lighter;
+}
+
+.post__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.post__body > img {
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.post__bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post__option {
+    display: flex;
+    gap: .8em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.post__option:hover {
+    background-color: rgb(0, 34, 53);
+    color: #2e81f4;
+}
+
+.modalPreview {
+    outline: none;
+    width: 60%;
 }

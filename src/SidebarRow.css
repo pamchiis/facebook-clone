@@ -1,9 +1,10 @@
 .sidebarRow {
     display: flex;
     align-items: center;
-    padding: .5em;
+    padding: 1em;
     color: white;
     cursor: pointer;
+    font-size: 1em;
 }
 .sidebarRow > .MuiAvatar-root {
     margin-right: 1em;

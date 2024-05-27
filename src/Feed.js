@@ -7,6 +7,10 @@ function Feed() {
   return <div className="feed">
         <MessageSender />
         <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
     </div>;
 }
 
