@@ -1,5 +1,5 @@
 .sidebar {
     background-color: black;
     padding: 2em;
-    border-right: .1em solid white;
+    border-right: .1em solid rgba(255, 255, 255, 0.411);
 }

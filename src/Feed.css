@@ -1,9 +1,11 @@
 .feed {
-    margin: 0;
-    padding: 0;
+    flex: 1;
+    gap: 1em;
+    padding-top: 5em;
     background-color: black;
     display: flex;
     align-items: center;
-    flex-grow: 8;
     justify-content: center;
+    flex-direction: column;
+    
 }
