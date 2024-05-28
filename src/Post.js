@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Post.css";
-import { Avatar, Modal, Box, Typography, Button } from '@mui/material';
+import { Avatar, Modal } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
@@ -11,14 +11,15 @@ function Post({ profileImg, image, username, timestamp, message }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  if (timestamp == null) return;
+  console.log({timestamp});
   return <div className="post">
     <div className="post__top">
         <Avatar src={profileImg} className="post__avatar"/>
         <div className="post__header">
             <h4>{username}</h4>
             <div className="header__timeblock">
-                <h5>{timestamp}</h5>
+                <h5>{new Date(timestamp.toDate()).toUTCString()}</h5>
                 <CalendarMonthIcon />
             </div>
         </div>
