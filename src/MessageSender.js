@@ -1,4 +1,4 @@
-import { Avatar, Box, Modal } from '@mui/material';
+import { Avatar, Box, Modal, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import "./MessageSender.css";
 import VideocamIcon from '@mui/icons-material/Videocam';
@@ -20,11 +20,15 @@ function MessageSender() {
   const [{ user }, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const [imgInput, setImgInput] = useState("");
-  
+  const handleCloseClear = () => {
+    setOpen(false);
+    setImgInput('');
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isBlank(input)) {
       setInput('');
+      setImgInput('');
       return
     };
     try {
@@ -33,10 +37,12 @@ function MessageSender() {
         message: input,
         timestamp: timeCurrent,
         profilePic: user.photoURL,
-        username: user.displayName
+        username: user.displayName,
+        image: imgInput,
       });
       console.log(timeCurrent + " <= this is the current time ");
       setInput("");
+      setImgInput("");
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -51,7 +57,9 @@ function MessageSender() {
             <SendIcon />
       </button>
     </div>
-
+    <div className="sender__body">
+      <img src={imgInput}/>
+    </div>
     <div className="sender__bottom">
         <div className="sender__option">
             <VideocamIcon />
@@ -71,8 +79,15 @@ function MessageSender() {
     </div>
     <div className="modal__container">
         <Modal open={open} onClose={handleClose} style={{display: 'flex', alignItems:'center', justifyContent:'center'}}>
-                <Box>
-                  <input value={imgInput} onChange={e => setImgInput(e.target.value)} type="text" placeholder={`Paste an image link here!`}/>
+                <Box className="modal__box">
+                  <Typography className="modal__text" id="modal-modal-title" variant="h6" component="h2">
+                      Attach Image
+                  </Typography>
+                  <input value={imgInput} onChange={e => setImgInput(e.target.value)} type="url" placeholder={`Paste your image link here!`}/>
+                  <div className="modal__buttons">
+                    <button onClick={handleCloseClear}>Clear</button>
+                    <button onClick={handleClose}>Submit</button>
+                  </div>
                 </Box>
         </Modal>
     </div>
