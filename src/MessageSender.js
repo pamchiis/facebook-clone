@@ -14,6 +14,7 @@ function isBlank(str) {
 };
 
 function MessageSender() {
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -51,11 +52,13 @@ function MessageSender() {
   return <div className="messageSender">
 
     <div className="sender__top">
-      <Avatar src={user.photoURL}/>
-      <input value={input} onChange={e => setInput(e.target.value)} type="text" placeholder={`What's on your mind, ${user.displayName}?`}/>
-      <button onClick={handleSubmit} type="submit">
-            <SendIcon />
-      </button>
+      <form>
+        <Avatar src={user.photoURL}/>
+        <input value={input} onChange={e => setInput(e.target.value)} type="text" placeholder={`What's on your mind, ${user.displayName}?`}/>
+        <button onClick={handleSubmit} type="submit">
+              <SendIcon />
+        </button>
+      </form>
     </div>
     <div className="sender__body">
       <img src={imgInput}/>
@@ -66,9 +69,9 @@ function MessageSender() {
             <h4>Live Video</h4>
         </div>
         
-        <div className="sender__option">
+        <div className="sender__option" onClick={handleOpen}>
             <CollectionsIcon />
-            <h4 onClick={handleOpen}>Photo/Video</h4>
+            <h4>Photo/Video</h4>
         </div>
         
         <div className="sender__option">

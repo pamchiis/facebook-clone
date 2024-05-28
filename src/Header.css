@@ -10,6 +10,11 @@
     background-color: black;
     color: white;
 }
+@media screen and (max-width: 680px) {
+    .header > .header__middle, .header > .header__right {
+      display: none;
+    }
+  }
 .header__left {
     display: flex;
     align-items: center;
