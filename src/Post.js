@@ -19,7 +19,7 @@ function Post({ profileImg, image, username, timestamp, message }) {
         <div className="post__header">
             <h4>{username}</h4>
             <div className="header__timeblock">
-                <h5>{new Date(timestamp.toDate()).toUTCString()}</h5>
+                <h5>{new Date(timestamp.toDate()).toDateString()}</h5>
                 <CalendarMonthIcon />
             </div>
         </div>

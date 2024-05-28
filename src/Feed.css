@@ -8,3 +8,9 @@
     height: 100%;
     padding-top: 5em;
 }
+@media  screen and (max-width: 680px) {
+    .feed {
+        height: 100%;
+        width: 100%;
+    }
+}
