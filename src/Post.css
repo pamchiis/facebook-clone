@@ -5,22 +5,7 @@
     border-radius: 1em;
     color: white;
     padding: 1em;
-    width: 50%;
-}
-@media screen and (max-width: 1580px) {
-    .post {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 680px) {
-    .post__body > img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-    .post__option > h4 {
-        display: none;
-    }
+    width: 40em;
 }
 .post > .post__top , .post > .post__body {
     padding: .5em;
@@ -49,11 +34,8 @@
 }
 
 .post__body > img {
-    align-self: center;
     border-radius: 1em;
     cursor: pointer;
-    max-width: 100em;
-    max-height: 30em;
 }
 
 .post__bottom {
@@ -79,5 +61,5 @@
 
 .modalPreview {
     outline: none;
-    width: 30%;
+    width: 60%;
 }

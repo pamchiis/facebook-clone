@@ -6,7 +6,10 @@
     padding: 2em;
     padding-top: 5em;
     border-right: .1em solid rgba(255, 255, 255, 0.411);
+    position: sticky;
     z-index: 50;
+    top: 6.1em;
+    height: 100vh;
 }
 
 .sidebar > h4 , .sidebar__footer > h4 {
@@ -19,10 +22,4 @@
     gap: 1em;
     align-items: center;
     cursor: pointer;
-}
-
-@media screen and (max-width: 680px) {
-    .sidebar {
-        display: none;
-    }
 }

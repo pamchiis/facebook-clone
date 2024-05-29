@@ -6,31 +6,13 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    width: 50%;
+    width: 40em;
     padding: 1em;
-}
-@media screen and (max-width: 1580px) {
-    .messageSender {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 680px) {
-    .sender__top > form {
-        margin: 0;
-        gap: 0;
-    }
-    .sender__top > form > input {
-        padding: 0;
-        width: 100%;
-    }
-    .sender__option > h4 {
-        display: none;
-    }
 }
 img[src=""] {
     display: none;
 }
-.sender__top > form {
+.sender__top {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +37,7 @@ img[src=""] {
     overflow: hidden;
 }
 
-.sender__top > form > input {
+.sender__top > input {
     flex: 1;
     background-color: transparent;
     outline: none;
@@ -65,7 +47,7 @@ img[src=""] {
     color: white;
 }
 
-.sender__top > form > button {
+.sender__top > button {
     display: flex;
     align-items: center;
     justify-content: center;
